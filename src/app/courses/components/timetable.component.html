@@ -1,0 +1,26 @@
+<mat-grid-list cols="10"
+  rowHeight="40px"
+  style="min-width: 768px;">
+  <mat-grid-tile [style.background]="'#e0e0e0'"> วัน/เวลา </mat-grid-tile>
+  <mat-grid-tile [style.background]="'#e0e0e0'">2</mat-grid-tile>
+  <mat-grid-tile [style.background]="'#e0e0e0'">3</mat-grid-tile>
+  <mat-grid-tile [style.background]="'#e0e0e0'">4</mat-grid-tile>
+  <mat-grid-tile [style.background]="'#e0e0e0'">4</mat-grid-tile>
+  <mat-grid-tile [style.background]="'#e0e0e0'">4</mat-grid-tile>
+  <mat-grid-tile [style.background]="'#e0e0e0'">4</mat-grid-tile>
+  <mat-grid-tile [style.background]="'#e0e0e0'">4</mat-grid-tile>
+  <mat-grid-tile [style.background]="'#e0e0e0'">4</mat-grid-tile>
+  <mat-grid-tile [style.background]="'#e0e0e0'">4</mat-grid-tile>
+
+  <ng-container *ngFor="let tile of tiles">
+    <mat-grid-tile [style.background]="'#e0e0e0'">
+      {{ tile.day }}
+    </mat-grid-tile>
+    <mat-grid-tile *ngFor="let t of tile.times"
+      [colspan]="t.cols"
+      [rowspan]="1"
+      [style.background]="t.color">
+      {{t.text}}
+    </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>

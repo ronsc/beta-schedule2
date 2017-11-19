@@ -1,0 +1,15 @@
+<mat-form-field fxFlex
+  style="padding: 0 16px;">
+  <input matInput
+    type="text"
+    placeholder="ค้นหารายวิชา"
+    [(ngModel)]="value" />
+  <button mat-button
+    *ngIf="value"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="value=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
