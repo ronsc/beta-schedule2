@@ -3,7 +3,8 @@
   <input matInput
     type="text"
     placeholder="ค้นหารายวิชา"
-    [(ngModel)]="value" />
+    [(ngModel)]="value"
+    (keyup.enter)="search.emit(value)" />
   <button mat-button
     *ngIf="value"
     matSuffix

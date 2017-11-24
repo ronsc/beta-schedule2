@@ -13,13 +13,15 @@ import { CreatePlanComponent } from './containers/create-plan.component';
 import { SearchSelectCoursePageComponent } from './containers/search-select-course-page';
 import { TimetablePlanPageComponent } from './containers/timetable-plan-page';
 import { CoursesRoutingModule } from './courses-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     CoursesRoutingModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   declarations: [
     CourseSearchComponent,

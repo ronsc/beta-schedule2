@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'schd2-course-search-list',
@@ -7,7 +7,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseSearchListComponent implements OnInit {
-  typesOfShoes = ['คอมพิวเตอร์ในชีวิตประจำวันอังคารที่', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
+  @Input() items = [];
 
   constructor() { }
 

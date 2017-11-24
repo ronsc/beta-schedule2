@@ -1,11 +1,12 @@
-<mat-card style="padding: 0;">
+<mat-card style="padding: 0; padding-bottom: 16px;">
   <mat-card-header style="padding: 24px 16px 0 16px;">
     <mat-card-title>รายวิชา</mat-card-title>
     <mat-card-subtitle>ค้นหาและเลือกรายวิชา</mat-card-subtitle>
   </mat-card-header>
 
-  <div fxLayout="column">
-    <schd2-course-search></schd2-course-search>
-    <schd2-course-search-list></schd2-course-search-list>
-  </div>
+  <schd2-course-search (search)="onSearch($event)"></schd2-course-search>
+
+  <mat-card-content style="height: calc(100vh - 253.5px); max-height: calc(100vh - 253.5px); overflow-y: auto;">
+    <schd2-course-search-list [items]="(items$ | async)"></schd2-course-search-list>
+  </mat-card-content>
 </mat-card>

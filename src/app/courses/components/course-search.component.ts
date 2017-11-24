@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'schd2-course-search',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseSearchComponent implements OnInit {
   value = '';
+  @Output() search = new EventEmitter<string>();
 
   constructor() { }
 
